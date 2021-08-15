@@ -1,0 +1,214 @@
+/*Fundo: 121212; lefttab: 202020; messaItem: 2b2b2b*/*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*scrol bar*/
+::-webkit-scrollbar{
+    background: none;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: #505050;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #808080;
+}
+/*visão do chat, inpout, aba esquerda, e mensagens*/
+#displayArea{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/*Aba esquerda*/
+#leftTab{
+    width: 20%;
+    height: 100%;
+    background: #202020;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    z-index: 3;
+}
+#userInfo{
+    border-bottom: 1px solid white;
+    height: 100%;
+    padding-top: 5%;
+}
+#userInfo input{
+    width: 90%;
+    padding: 1%;
+    background: none;
+    border: none;
+    border: 1px solid red;
+    color:white;
+    font-size: 15px;
+}
+
+#roominfo{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    background: #202020;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 7fr;
+    overflow: auto;
+}
+#roomInfo h1{
+    font-size: 16px;
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+#roominfo p{
+    margin-bottom: 4%;
+}
+#usersInRoom{
+    box-shadow: 0px 2px 5px #a8009c;
+    overflow: auto;
+}
+
+#hideBtn{
+    visibility: hidden;
+}
+
+/*Miolo com as mensagens etc*/
+#chatArea{
+    width: 100%;
+    height: 100%;
+}
+#chatArea h1{
+    width: 100%;
+    height: 10%;
+    background: #101010;
+    color: #c9caca;
+    text-align:center;
+    z-index: 2;
+}
+#chatarea h1 button{
+    display: none;
+}
+/*Area com a lista de mensagens*/
+#messages{
+    width: 100%;
+    height: 78%;
+    overflow: auto;
+    background: #121212;
+    color: white;
+}
+#messageItem{
+    background: #2b2b2b;
+    max-width: 90%;
+    max-height: 40%;
+    word-break: break-all;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding: 5px;
+    display: flex;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+#imgDiv{
+    height: 100%;
+}
+#imgDiv img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+#textDiv{
+    width: auto;
+    margin-left: 2%;
+}
+#textDiv p{
+    width: auto;
+    height: 90%;
+    overflow: auto;
+}
+
+
+/*Formulario pra enviar mensagens*/
+#form{
+    height: 12%;
+    background: #121212;
+    display: grid;
+    box-shadow: 5px 0px 10px #090909;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    z-index: 2;
+}
+#form output{
+    color: white;
+    width: 80%;
+    padding-left: 3%;
+    font-size: 15px;
+}
+#form div{
+    display: flex;
+    justify-content: center;
+}
+#form input{
+    width: 85%;
+    height: 70%;
+    border: none;
+    background: #2b2b2b;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+}
+#form button{
+    width: 10%;
+    height: 70%;
+    border: none;
+    background: #1E90FF;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+@media (max-width:600px){
+
+    #leftTab{
+        width: 60%;
+        display: none;
+        position: absolute;
+        transition: 1s;
+    }
+    #leftTab button{
+        visibility: visible;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 5%;
+        background: none;
+        border: 1px solid red;
+        color: red;
+    }
+
+    #chatArea h1{
+        font-size: 20px;
+        height: 8%;
+        padding-top: 12px;
+    }
+    #chatArea h1 button{
+        display: block;
+        position: absolute;
+        border: none;
+        background: #1E90FF;
+        color: white;
+        width: 15%;
+        height: 5%;
+    }
+
+    #form input{
+        width: 70%;
+    }
+    #form  button{
+        width: 20%;
+    }
+}
