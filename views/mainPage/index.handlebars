@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/css/mainStyle.css">
+
+<div id="content">
+    <div id="roomInfo">
+        
+        <header id="userInfo">
+            <img id="avatar" src={{avatar}} alt="">
+            <h2 id="author">{{nick}}</h2>
+            <button id="editProfileButton" onclick="showForm()"><img src="/imgs/blackEdit.png" alt=""></button>
+        </header>
+
+        <div id="logIns">
+            <ul id="idList">
+                
+            </ul>
+        </div>
+
+    <footer id="footer">
+        <form action="/theme">
+            <button type="submit">Tema e cores</button>
+        </form>
+    </footer>
+
+    </div>
+
+    <div id="roomChat">
+
+        <nav>
+            <h1>TalkChat</h1>
+        </nav>
+
+        <ul id="messageList">
+            
+        </ul>
+
+        <form id="form">
+            <input type="text" name="" id="messageInput" placeholder="Mensgem aqui..." autocomplete="off">
+            <button type="submit"><img src="/imgs/blackSend.png" alt=""></button>
+        </form>
+    </div>
+</div>
+
+
+<div id="editProfile" style="display: none;">
+    <form action="/verifyUser" method="POST">
+
+        <h2>Confirme sua senha.</h2>
+        <input style="display: none;" type="text" name="userEmail" autocomplete="off" value={{email}}>
+        <input type="password" name="userPassword" placeholder="Senha" autocomplete="off">
+
+        <button type="submit">Editar perfil</button>
+    </form>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/mainGears.js"></script>
+
+<script>
+    function showForm(){
+        let elementForm = document.getElementById('editProfile')
+        if(elementForm.style.display == 'none'){
+            elementForm.style.display = 'flex'
+        }else{
+            elementForm.style.display = 'none'
+        }
+    }
+</script>

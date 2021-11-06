@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/loginStyle.css">
+<div id="content">
+    <form id="form" action="/talkchathome" method="POST">
+
+        <h1>Faça Login no TalkChat</h1>
+        <input type="text" name="email" id="userEmail" placeholder="Digite seu email" autocomplete="off" required>
+        <div id="passwordDiv">
+            <input type="password" name="pass" id="userPassword" placeholder="E sua senha!" autocomplete="off" required>
+            <p onclick="showPassword('userPassword')" id="showPass"><img id="visibility" src="/imgs/visible.png" alt=""></p>
+        </div>
+
+        <button type="submit">Login</button>
+        <a href="createLogin/createLogin">Não tem conta? Crie uma aqui!</a>
+
+    </form>
+</div>
+
+<script>
+    function showPassword(inputId){
+        let element = document.getElementById(inputId)
+        let imgElement = document.getElementById('visibility')
+
+        if(element.type == 'password'){
+            element.type = 'text'
+            imgElement.src = '/imgs/notVisible.png'
+        }else{
+            element.type = 'password'
+            imgElement.src = '/imgs/visible.png'
+        }
+    }
+</script>

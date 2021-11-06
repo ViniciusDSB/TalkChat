@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/updateProfile.css">
+
+
+<div id="content">
+
+    <div id="left">
+        <h1>Mude aqui as informações do seu perfil! Ou deixe-os como estão.</h1>
+    </div>
+
+    <div id="forms">
+        <form id="form" action="/updateUserProfile" method="POST">
+
+            <input style="display: none;" name="old" type="text" value={{email}} autocomplete="off">
+
+                <div id="avatarSetting">
+                    <div id="img">
+                        <img src={{avatar}} alt="">
+                    </div>
+                    <div id="text">
+                        <strong>Link de imagem de perfil</strong>
+                        <input name="userAvatar" type="text" placeholder="Salvar novo avatar?" value={{avatar}}>
+                    </div>
+                </div>
+
+                <strong>Nickname</strong>
+                <p>{{nick}}</p>
+                <input name="userNick" type="text" placeholder="Novo nickanme?" value={{nick}} autocomplete="off" required>
+
+                <strong>Email</strong>
+                <p>{{email}}</p>
+                <input name="userEmail" type="email" placeholder="Definir novo email?" value={{email}} autocomplete="off" required>
+
+                <strong>Senha</strong>
+                <p>{{password}}</p>
+                <input name="userPassword" type="password"placeholder="Criar nova senha?" value={{password}} autocomplete="off" required>
+
+                <div id="button">
+                    <button type="submit">Salvar</button>
+                </div>
+
+                
+            </form>
+
+            <form id="deleteAccountForm" action="/deleteAccount" method="POST">
+                <input style="display: none;" name="old" type="text" value={{email}} autocomplete="off">
+                <button type="submit">Deletar conta</button>
+            </form>
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/createLoginStyle.css">
+<div id="content">
+    <form id="form" action="/createlogin" method="POST">
+        <input type="text" name="userAvatar" id="input" placeholder="Link de imagem (opcional)" autocomplete="off">
+        <input type="text" name="userNick" id="input" placeholder="Nickname..." autocomplete="off" required>
+        <input type="email" name="userEmail" id="input"  placeholder="Email..." autocomplete="off" required>
+        <div id="passwordDiv">
+            <input type="password" name="pass" id="userPassword" placeholder="E sua senha!" autocomplete="off" required>
+            <p onclick="showPassword('userPassword')" id="showPass"><img id="visibility" src="/css/visible.png" alt=""></p>
+        </div>
+
+        <button type="submit">Criar Conta</button>
+    </form>
+</div>
+
+<script>
+    function showPassword(inputId){
+        let element = document.getElementById(inputId)
+        let imgElement = document.getElementById('visibility')
+
+        if(element.type == 'password'){
+            element.type = 'text'
+            imgElement.src = '/css/notVisible.png'
+        }else{
+            element.type = 'password'
+            imgElement.src = '/css/visible.png'
+        }
+    }
+</script>

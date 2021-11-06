@@ -1,0 +1,84 @@
+#content{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../imgs/Purple\ City.gif');
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #form{
+    width: 20%;
+    height: 45%;
+    background: rgba(0, 0, 0, 0.582);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #form h1{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5%;
+    letter-spacing: 1px;
+}
+
+#content #form #userEmail{
+    width: 80%;
+    height: 10%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    color: white;
+    outline: none;
+}
+#content #form input::placeholder{
+    color: #fff;
+}
+
+#content #form #passwordDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 10%;
+    border-bottom: 1px solid white;
+}
+#content #form #passwordDiv input{
+    width: 80%;
+    height: 100%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+#content #form #passwordDiv  p{
+    width: 20%;
+    height: 100%;
+}
+
+#content #form button{
+    border: none;
+    background: none;
+    border: 1px solid #009aff;
+    padding: 2%;
+    color: white;
+    margin-bottom: 5%;
+    transition: 0.5s;
+    margin-top: 5%;
+}#content #form button:hover{
+    color: #009aff;
+}
+
+#content #form a{
+    text-decoration: none;
+    color: #009aff;
+}#content #form a:hover{
+    color: white;
+}
