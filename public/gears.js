@@ -10,6 +10,9 @@ function renderMsg(msg){
     `
     let msgList = document.getElementById('messagesList')
     msgList.append(message)
+
+    let chatHeight = document.getElementById('messagesList').scrollHeight
+    document.getElementById('messagesList').scrollTo(0, chatHeight)
 }
 
 var form = document.getElementById('form');
@@ -30,10 +33,11 @@ form.addEventListener('submit', (e) => {
             txt: document.getElementById('inputMsg').value
         }
         socket.emit('newMsg', msgObj);
+        document.getElementById('inputMsg').value=''
     }else{
         alert('Digite uma mensagem, caralho')
+        document.getElementById('inputMsg').value='Isso aqui serve pra digitar!!!'
     }
         
-    document.getElementById('inputMsg').value=''
 
 })

@@ -6,27 +6,76 @@
     border: none;
     background: none;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
 }
 
 #main{
-    width: 100%;
+    width:100%;
     height: 100%;
     display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 6fr 1fr;
+    background: #000;
 }
 
+
 #leftTab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-row-start: 1;
-    grid-row-end: 3
+    grid-row-end: 3;
+    border-right: 1px solid;
+}#leftTab input{
+    width: 90%;
+    height: 5%;
+    border: 1px solid blue;
+    margin-bottom: 2%;
 }
 
 #messagesList{
-    height: 50%;
     overflow: auto;
-}
-#avatar{
+}#messagesList div{
+    min-height: 10%;
+    max-width: 90%;
+    margin: 2%;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 10fr;
+    word-break: break-all
+}#messagesList div img{
     width: 50px;
-    height: 50px
+    height: 50px;
+    border: 1px solid;
+    border-radius: 100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}#messagesList div h1{
+    font-size: 20px;
+    font-family: monospace;
+}#messagesList div p{
+    width: 98%;
+    height: 98%;
+    font-size: 16px;
+    font-family: monospace;
+    color: green;
 }
-#inputArea{
-    height: 10%;
+
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid;
+}
+#form input{
+    width: 70%;
+    height: 50%;
+    border-bottom: 1px solid green;
+}#form button{
+    width: 20%;
+    height: 50%;
+    border: 1px solid green;
 }
